@@ -57,6 +57,10 @@
     {
       "name": "corelib",
       "srcPath": "../corelib",
+    },
+    {
+      "name": "wechat",
+      "srcPath": "../wechat",
     }
   ]
 }

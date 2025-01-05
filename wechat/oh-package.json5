@@ -1,13 +1,11 @@
 {
-  "name": "entry",
+  "name": "wechat",
   "version": "1.0.0",
   "description": "Please describe the basic information.",
-  "main": "",
+  "main": "Index.ets",
   "author": "",
-  "license": "",
+  "license": "Apache-2.0",
   "dependencies": {
-    "corelib": "file:../../corelib",
-    "wechat": "file:../../wechat"
+    "@tencent/wechat_open_sdk": "^1.0.0"
   }
 }
-
