@@ -1,0 +1,62 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/anhui/.ohos/config/default_MyApplicationTwo_n8KNlrD3UKH3F7SnZUKqX1_HFA_5rd7isAHqiaWj2bU=.cer",
+          "storePassword": "0000001B950BE8C0E51CBAD5367CA121990CFD9743CFF370A03B5158299B0BAC815B626A06F5D0E0DBA883",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BE7E3A2CF149D17B666F306D9CAA51052CA647C67FC875BC7B3365F5C123CB0580AC1D6F2F25DC4",
+          "profile": "/Users/anhui/.ohos/config/default_MyApplicationTwo_n8KNlrD3UKH3F7SnZUKqX1_HFA_5rd7isAHqiaWj2bU=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/anhui/.ohos/config/default_MyApplicationTwo_n8KNlrD3UKH3F7SnZUKqX1_HFA_5rd7isAHqiaWj2bU=.p12"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.0.1(13)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true,
+            //是否严格检查绝对路径导入方式和相对路径跨模块导入方式
+            //参考：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/ide-hvigor-build-profile-V5#section511142752919
+            "noExternalImportByPath": false
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "corelib",
+      "srcPath": "../corelib",
+    }
+  ]
+}

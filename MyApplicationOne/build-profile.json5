@@ -1,0 +1,62 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/anhui/.ohos/config/default_MyApplicationOne_F9t2vvDMVb2KrqAJZ8ezEhcC4pQu9mvdRqSoY-SdCNU=.cer",
+          "storePassword": "0000001B06454F7AD640E27BA1F09E4AA3D5F8FA4DBFA902460DB2D54ACFD2D726E836311993C3E7917F93",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B1C86A9E83C25F2F15875137399EDB58288D827F6469417C45DF95FAD3F0696BD4DD395FCE8FB4D",
+          "profile": "/Users/anhui/.ohos/config/default_MyApplicationOne_F9t2vvDMVb2KrqAJZ8ezEhcC4pQu9mvdRqSoY-SdCNU=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/anhui/.ohos/config/default_MyApplicationOne_F9t2vvDMVb2KrqAJZ8ezEhcC4pQu9mvdRqSoY-SdCNU=.p12"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.0.1(13)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true,
+            //是否严格检查绝对路径导入方式和相对路径跨模块导入方式
+            //参考：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/ide-hvigor-build-profile-V5#section511142752919
+            "noExternalImportByPath": false
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "corelib",
+      "srcPath": "../corelib",
+    }
+  ]
+}
